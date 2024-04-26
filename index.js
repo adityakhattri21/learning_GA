@@ -1,2 +1,3 @@
-const a = "hello all this is the test file"
-console.log(a)
+const a = 5;
+const b = 10;
+console.log("Output is ------>",a+b);
