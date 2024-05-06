@@ -1,7 +1,7 @@
 import {expect} from "chai";
 
 import {sum, test} from "./index.js";
-
+//this is the sample tests we will be using.
 describe("Sample Tests",()=>{
     it('should return the sum of two numbers', function() {
         const result = sum(2, 3);
