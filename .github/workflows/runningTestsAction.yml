@@ -6,11 +6,8 @@ on:
     branches: [main]
   
 jobs:
-    
   testing:
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -24,4 +21,4 @@ jobs:
         run: npm ci
 
       - name: Running tests
-      - run: npm run test 
+        run: npm run test
