@@ -4,10 +4,14 @@ on:
   pull_request:
     types: [opened]
     branches: [main]
-  
+
+
 jobs:
   testing:
     runs-on: ubuntu-latest
+    environment: test
+    env:
+      ${{ secrets }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
