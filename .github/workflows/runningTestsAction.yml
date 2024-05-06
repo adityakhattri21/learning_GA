@@ -1,7 +1,7 @@
 name: Run tests on PR
 
 on:
-  pull_requests:
+  pull_request:
     types: [opened]
     branches: [main]
   
