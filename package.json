@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "chai": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "mocha": "^10.4.0"
+  },
+  "name": "learning_ga",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --full-trace ./test.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
