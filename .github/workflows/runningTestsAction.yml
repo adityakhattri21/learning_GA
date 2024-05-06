@@ -1,7 +1,7 @@
 name: Run tests on PR
 
 on:
-  pull_request:
+  pull_requests:
     types: [opened]
     branches: [main]
   
@@ -24,4 +24,4 @@ jobs:
         run: npm ci
 
       - name: Running tests
-        run: npm run test 
+      - run: npm run test 
