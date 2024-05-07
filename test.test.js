@@ -5,6 +5,7 @@ import {app} from "./index.js"
 //this is the sample tests we will be using.
 //this is the new sample comment
 //checks express app now.
+//samples
 describe("Sample Tests",()=>{
 
   it("should send working when / is pinged",async()=>{
