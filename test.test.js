@@ -10,6 +10,6 @@ describe("Sample Tests",()=>{
   it("should send working when / is pinged",async()=>{
     const response = await request(app)
     .get("/");
-    expect(response.body.message).to.equal('working')
+    expect(response.body.message).to.equal('Working')
   })
 });
