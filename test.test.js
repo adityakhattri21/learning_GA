@@ -1,25 +1,14 @@
 import {expect} from "chai";
+import request from "supertest"
+import {app} from "./index.js"
 
-import {sum, test} from "./index.js";
 //this is the sample tests we will be using.
 //this is the new sample comment
 describe("Sample Tests",()=>{
-    it('should return the sum of two numbers', function() {
-        const result = sum(2, 3);
-        expect(result).to.equal(5);
-      });
-    
-      it('should handle negative numbers', function() {
-        const result = sum(-5, 3);
-        expect(result).to.equal(-2);
-      });
-    
-      it('should handle zero values', function() {
-        const result = sum(0, 0);
-        expect(result).to.equal(0);
-      });
-      it('should handle running of test function', function() {
-        const result = test();
-        expect(result).to.equal('This is the test env test_dev');
-      });
-})
+
+  it("should send working when / is pinged",async()=>{
+    const response = await request(app)
+    .get("/");
+    expect(response.body.message).to.equal('working')
+  })
+});

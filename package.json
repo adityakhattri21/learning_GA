@@ -2,16 +2,24 @@
   "dependencies": {
     "chai": "^5.1.0",
     "dotenv": "^16.4.5",
-    "mocha": "^10.4.0"
+    "express": "^4.19.2",
+    "mocha": "^10.4.0",
+    "mongoose": "^8.3.4",
+    "supertest": "^7.0.0"
   },
   "name": "learning_ga",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "NODE_ENV=test mocha --full-trace ./test.test.js"
+    "test": "NODE_ENV=test mocha --full-trace --exit --timeout 300000 ./test.test.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
 }
