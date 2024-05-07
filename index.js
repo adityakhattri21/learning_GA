@@ -16,7 +16,6 @@ if(process.env.NODE_ENV==='test'){
     dotenv.config();
 }
 
-
 mongoose.connect(process.env.DB_URI).then(()=>{
     console.log("Connected to DB");
 }).catch((error)=>{
@@ -63,7 +62,8 @@ app.listen(port ,()=>{
 })
 
 export {
-    app
+    app,
+    Names
 }
 
 
