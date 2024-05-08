@@ -9,6 +9,7 @@ import {Names, app} from "./index.js"
 //for test the port should be 9000 and for dev the port should be 8000
 //only one environment we have now .
 describe("Sample Tests",()=>{
+  console.log(process.env)
   before(async()=>{
     await Names.deleteMany();
   });
