@@ -9,6 +9,9 @@ import {Names, app} from "./index.js"
 describe("Sample Tests",()=>{
   before(async()=>{
     await Names.deleteMany();
+  });
+  after(async()=>{
+    await Names.deleteMany();
   })
   it("should send working when / is pinged",async()=>{
     const response = await request(app)
@@ -18,13 +21,13 @@ describe("Sample Tests",()=>{
   it("should add a new name",async()=>{
     const response = await request(app)
     .post("/name")
-    .send({name:"Aditya"});
+    .send({name:"Akash"});
     expect(response.body.message).to.equal("Data added successfully");
   });
   it("should fetch the names from the DB",async()=>{
     const response = await request(app)
     .get("/names");
     expect(response.body.data).to.be.an('array');
-    expect(response.body.data[0].name).to.equal('Aditya');
+    expect(response.body.data[0].name).to.equal('Akash');
   })
 });
