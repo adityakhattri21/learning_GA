@@ -6,6 +6,7 @@ import {Names, app} from "./index.js"
 //this is the new sample comment
 //checks express app now.
 //samples
+//for test the port should be 9000 and for dev the port should be 8000
 describe("Sample Tests",()=>{
   before(async()=>{
     await Names.deleteMany();
