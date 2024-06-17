@@ -9,7 +9,7 @@ import {createClient} from "redis"
 const __filepath = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filepath);
 
-console.log("Helllo JI Chai pee lo")
+
 if(process.env.NODE_ENV==='test'){
     dotenv.config({
         path: path.join(__dirname,`/.env.${process.env.NODE_ENV}`)
