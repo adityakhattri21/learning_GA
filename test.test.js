@@ -6,8 +6,14 @@ import {Names, app} from "./index.js"
 //this is the new sample comment
 //checks express app now.
 //samples
+//for test the port should be 9000 and for dev the port should be 8000
+//only one environment we have now .
 describe("Sample Tests",()=>{
+  console.log(process.env)
   before(async()=>{
+    await Names.deleteMany();
+  });
+  after(async()=>{
     await Names.deleteMany();
   })
   it("should send working when / is pinged",async()=>{
@@ -18,13 +24,13 @@ describe("Sample Tests",()=>{
   it("should add a new name",async()=>{
     const response = await request(app)
     .post("/name")
-    .send({name:"Aditya"});
+    .send({name:"Akash"});
     expect(response.body.message).to.equal("Data added successfully");
   });
   it("should fetch the names from the DB",async()=>{
     const response = await request(app)
     .get("/names");
     expect(response.body.data).to.be.an('array');
-    expect(response.body.data[0].name).to.equal('Aditya');
+    expect(response.body.data[0].name).to.equal('Akash');
   })
 });
