@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import Express from "express"
 import {createClient} from "redis"
 //doing the dotenv process
+//added sample commit 
 const __filepath = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filepath);
 
