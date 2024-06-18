@@ -1,12 +1,15 @@
 {
   "dependencies": {
+    "axios": "^1.7.2",
     "chai": "^5.1.0",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mocha": "^10.4.0",
     "mongoose": "^8.3.4",
     "redis": "^4.6.13",
-    "supertest": "^7.0.0"
+    "sinon": "^18.0.0",
+    "supertest": "^7.0.0",
+    "synk": "^0.0.2"
   },
   "name": "learning_ga",
   "version": "1.0.0",
